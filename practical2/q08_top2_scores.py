@@ -4,8 +4,10 @@ x = {}
 for i in range(num):
     name = input("Enter name: ")
     score = int(input("Enter {0}'s score: ".format(name)))
-    x[name] = score
+    x[score] = name
 
-keys = sorted(x.items(), key = lambda x: x[1])
-print(keys[num-1])
-print(keys[num-2])
+print(x[max(x)], "has a highest score of", max(x))
+x.pop(max(x))
+print(x[max(x)], "has a second highest score of", max(x))
+
+
