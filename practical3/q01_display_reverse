@@ -1,0 +1,10 @@
+def reverse_int(x):
+    y = 0
+    for i in range(len(str(x))):
+        n = x % 10
+        x = x // 10
+        y = y * 10 + n
+    return y
+
+x = int(input("Enter integer: "))
+print(reverse_int(x))
