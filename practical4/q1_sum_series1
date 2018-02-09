@@ -1,0 +1,9 @@
+def sum_series(i):
+    a = 1 / i
+    if i == 1:
+        return 1
+    else:
+        return a + sum_series(i-1)
+    
+i = int(input("Enter integer: "))
+print("{0:.3f}".format(sum_series(i)))
